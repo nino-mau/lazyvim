@@ -4,6 +4,8 @@
 
 vim.g.lazyvim_mini_snippets_in_completion = true
 
+vim.g.lazyvim_eslint_auto_format = true
+
 -- in your LazyVim overrides (e.g. `lua/config/options.lua`)
 -- vim.api.nvim_create_autocmd("FileType", {
 --   pattern = { "javascript", "lua", "python", "rust" },

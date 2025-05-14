@@ -184,6 +184,14 @@ ls.add_snippets("javascript", {
     i(1),
     t(");"),
   }),
+
+  -- async named function
+  s("fae", {
+    t("export async function "),
+    i(1),
+    t("() {\n"),
+    t("};"),
+  }),
 })
 
 ls.add_snippets("typescript", {
@@ -206,6 +214,14 @@ ls.add_snippets("typescript", {
     t("console.debug("),
     i(1),
     t(");"),
+  }),
+
+  -- async named function
+  s("fae", {
+    t("export async function "),
+    i(1),
+    t("() {\n"),
+    t("};"),
   }),
 
   s({ trig = "a", name = "await", dscr = "await value" }, { t("await "), i(1, "value") }),
@@ -251,7 +267,6 @@ ls.add_snippets("typescript", {
     { t("const { "), i(1, "prop"), t(" } = await "), i(2, "promise"), t(";") }
   ),
 
-  -- Note: Cleaned up significantly
   s(
     { trig = "cf", name = "const arrow function assignment", dscr = "const name = (...) => { ... }" },
     fmt(

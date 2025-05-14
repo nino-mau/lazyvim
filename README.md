@@ -45,3 +45,9 @@
   ```bash
   :TSInstallInfo
   ```
+
+- **Indent selection by one space:**
+
+  ```bash
+  :normal! I
+  ```

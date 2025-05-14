@@ -5,4 +5,10 @@
 local map = vim.keymap.set
 
 -- In normal mode, <C-c> will select all lines and yank into the system clipboard:
-map("n", "<C-c>", 'ggVG"+y', { desc = "Copy entire buffer to system clipboard" })
+map("n", "<C-c>", ":%y<CR>", { noremap = true, silent = true, desc = "Copy entire buffer to system clipboard" })
+
+-- Tab to go to next buffer
+map("n", "<Tab>", "<cmd>bnext<CR>", { desc = "Next buffer" })
+
+-- Shift-Tab to go to previous buffer
+map("n", "<S-Tab>", "<cmd>bprevious<CR>", { desc = "Previous buffer" })

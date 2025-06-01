@@ -219,10 +219,25 @@ ls.add_snippets("typescript", {
   -- async named function
   s("fae", {
     t("export async function "),
-    i(1),
+    i(1, "name"),
     t("() {\n"),
     t("};"),
   }),
+
+  -- nitro throw error response
+  s(
+    { trig = "nte", name = "throw createError", dscr = "throw createError with status code and message" },
+    t({
+      "throw createError({",
+      "      statusCode: res.status || 500,",
+      "      statusMessage: res.message || 'Unexpected server error',",
+      "      data: {",
+      "        success: false,",
+      "        error: res.message || 'Unexpected Server Error',",
+      "      },",
+      "    });",
+    })
+  ),
 
   s({ trig = "a", name = "await", dscr = "await value" }, { t("await "), i(1, "value") }),
 
@@ -371,7 +386,7 @@ ls.add_snippets("typescript", {
     { trig = "ef", name = "export named function", dscr = "export function member(...) { ... }" },
     fmt(
       [[
-      export function {}({}) {{
+      export async function {}({}) {{
       	{}
       }}
       ]],

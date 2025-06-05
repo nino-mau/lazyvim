@@ -22,7 +22,7 @@ return {
           },
         },
         ["tailwindcss"] = {
-          filetypes = { "css", "vue", "html" },
+          filetypes = { "css", "vue", "html", "typescript", "typescriptreact" },
           settings = {
             tailwindCSS = {
               experimental = {

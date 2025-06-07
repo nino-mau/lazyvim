@@ -1,0 +1,29 @@
+{
+  "Vue define props": {
+    "prefix": "v3defineprops",
+    "body": [
+      "const props = defineProps({",
+      " ${1:item}: {",
+      "   type: ${2:type}",
+      "   default: ${3:default}",
+      "   }",
+      "});"
+    ],
+    "description": "define props statement"
+  },
+  "Vue class array": {
+    "prefix": "v3classarr",
+    "body": [":class=\"['', ${1:variable}]\""],
+    "description": "class array binding"
+  },
+  "Vue css deep selector": {
+    "prefix": "v3deep",
+    "body": [":deep(.${1:className}) {", "", "}"],
+    "description": "deep css class selector"
+  },
+  "Vue class conditional": {
+    "prefix": "v3classcond",
+    "body": [":class=\"[", " '',", " {", " '': ${1:variable}", " },", "]"],
+    "description": "class conditional"
+  }
+}

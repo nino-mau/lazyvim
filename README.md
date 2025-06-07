@@ -51,3 +51,9 @@
   ```bash
   :normal! I
   ```
+
+- **Delete all matching patterns:**
+
+  ```bash
+  :%s/pattern/
+  ```

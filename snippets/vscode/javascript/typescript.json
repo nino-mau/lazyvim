@@ -1,6 +1,6 @@
 {
-  "console log": {
-    "prefix": "clg",
+  "nitro endpoint error": {
+    "prefix": "nte",
     "body": [
       "throw createError({",
       " statusCode: res.status || 500,",

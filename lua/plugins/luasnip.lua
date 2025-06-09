@@ -10,17 +10,22 @@ return {
     config = function()
       local ls = require("luasnip")
 
-      vim.keymap.set({ "i", "s" }, "<C-P>", function()
-        if ls.expand_or_locally_jumpable() then
-          ls.expand_or_jump()
-        end
-      end, { desc = "Expand or jump forward in lua-snippet", silent = true })
+      ls.config.setup({
+        history = true,
+        updateevents = "TextChanged,TextChangedI",
+      })
 
-      vim.keymap.set({ "i", "s" }, "<C-J>", function()
-        if ls.jumpable(-1) then
-          ls.jump(-1)
-        end
-      end, { desc = "Jump backward in lua-snippet", silent = true })
+      -- vim.keymap.set({ "i", "s" }, "<C-P>", function()
+      --   if ls.expand_or_locally_jumpable() then
+      --     ls.expand_or_jump()
+      --   end
+      -- end, { desc = "Expand or jump forward in lua-snippet", silent = true })
+      --
+      -- vim.keymap.set({ "i", "s" }, "<C-J>", function()
+      --   if ls.jumpable(-1) then
+      --     ls.jump(-1)
+      --   end
+      -- end, { desc = "Jump backward in lua-snippet", silent = true })
 
       -- Load custom snippets
       require("luasnip.loaders.from_lua").load({ paths = "~/.config/lazyvim/snippets/" })

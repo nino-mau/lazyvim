@@ -1,0 +1,10 @@
+{
+  "heading comment": {
+    "prefix": "chead",
+    "body": ["/**", "*", "* == ${1:item} ==", "*", "*/"]
+  },
+  "block comment": {
+    "prefix": "csec",
+    "body": ["/**", "*${1:item}", "*/"]
+  }
+}

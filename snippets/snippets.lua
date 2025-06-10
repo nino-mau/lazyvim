@@ -160,7 +160,8 @@ ls.add_snippets("vue", {
     i(0),
   }),
 })
-
+-- React
+ls.add_snippets("typescript", {})
 -- Javascript/Typescript
 
 ls.add_snippets("javascript", {
@@ -207,13 +208,6 @@ ls.add_snippets("typescript", {
     t("console.error('"),
     i(1),
     t(": ');"),
-  }),
-
-  -- Console.debug
-  s("cld", {
-    t("console.debug("),
-    i(1),
-    t(");"),
   }),
 
   -- async named function

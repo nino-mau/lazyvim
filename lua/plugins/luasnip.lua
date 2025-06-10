@@ -14,7 +14,7 @@ return {
     opts = function()
       local ls = require("luasnip")
       -- load VSCode-style snippets from friendly-snippets
-      require("luasnip.loaders.from_vscode").lazy_load()
+      require("luasnip.loaders.from_vscode").lazy_load({ paths = { "~/.config/lazyvim/snippets/vscode/" } })
       return ls
     end,
   },

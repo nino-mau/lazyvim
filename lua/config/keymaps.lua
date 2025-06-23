@@ -4,6 +4,7 @@
 
 local map = vim.keymap.set
 local ls = require("luasnip")
+local supermavenSuggestion = require("supermaven-nvim.completion_preview")
 
 -- In normal mode, <C-c> will select all lines and yank into the system clipboard:
 map("n", "<C-c>", ":%y<CR>", { noremap = true, silent = true, desc = "Copy entire buffer to system clipboard" })
@@ -21,3 +22,24 @@ end, { silent = true })
 vim.keymap.set({ "i", "s" }, "<C-G>", function()
   ls.jump(-1)
 end, { silent = true })
+
+-- Keybind to activate/deactivate supermaven auto completion
+vim.keymap.set("n", "<leader>ac", function()
+  if supermavenSuggestion.disable_inline_completion then
+    supermavenSuggestion.disable_inline_completion = false
+    print("Inline AI autocompletion ENABLED")
+  else
+    supermavenSuggestion.disable_inline_completion = true
+    print("Inline AI autocompletion DISABLED")
+  end
+end, { desc = "[T]oggle [I]nline [A]I autocompletion" })
+
+vim.keymap.set("i", "<C-c>", function()
+  if supermavenSuggestion.disable_inline_completion then
+    supermavenSuggestion.disable_inline_completion = false
+    print("Inline AI autocompletion ENABLED")
+  else
+    supermavenSuggestion.disable_inline_completion = true
+    print("Inline AI autocompletion DISABLED")
+  end
+end, { desc = "[T]oggle [I]nline [A]I autocompletion" })

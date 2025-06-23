@@ -32,7 +32,7 @@ vim.keymap.set("n", "<leader>ac", function()
     supermavenSuggestion.disable_inline_completion = true
     print("Inline AI autocompletion DISABLED")
   end
-end, { desc = "[T]oggle [I]nline [A]I autocompletion" })
+end, { desc = "Toggle inline completion" })
 
 vim.keymap.set("i", "<C-c>", function()
   if supermavenSuggestion.disable_inline_completion then
@@ -42,4 +42,4 @@ vim.keymap.set("i", "<C-c>", function()
     supermavenSuggestion.disable_inline_completion = true
     print("Inline AI autocompletion DISABLED")
   end
-end, { desc = "[T]oggle [I]nline [A]I autocompletion" })
+end, { desc = "Toggle inline completion" })

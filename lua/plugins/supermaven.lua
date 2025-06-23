@@ -1,9 +1,7 @@
 return {
   "supermaven-inc/supermaven-nvim",
   config = function()
-    require("supermaven-nvim").setup({
-      disable_cmp_source = true,
-    })
+    require("supermaven-nvim").setup({})
     local suggestion = require("supermaven-nvim.completion_preview")
 
     -- Disable inline completion by default

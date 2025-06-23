@@ -10,6 +10,8 @@ return {
     config = function()
       local ls = require("luasnip")
 
+      ls.filetype_extend("vue", { "typescript" })
+
       ls.config.setup({
         history = true,
         updateevents = "TextChanged,TextChangedI",
@@ -28,7 +30,6 @@ return {
       -- end, { desc = "Jump backward in lua-snippet", silent = true })
 
       -- Load custom snippets
-      require("luasnip.loaders.from_lua").load({ paths = "~/.config/lazyvim/snippets/" })
     end,
     opts = function()
       local ls = require("luasnip")

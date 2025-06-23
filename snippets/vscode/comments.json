@@ -3,8 +3,12 @@
     "prefix": "chead",
     "body": ["/**", "*", "* -- ${1:item} --", "*", "*/"]
   },
-  "block comment": {
+  "jsdoc block comment": {
     "prefix": "csec",
     "body": ["/**", "* ${1:item}", "*/"]
+  },
+  "jsdoc line comment": {
+    "prefix": "cline",
+    "body": ["/** ${1:item} */"]
   }
 }

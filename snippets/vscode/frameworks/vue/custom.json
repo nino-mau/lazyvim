@@ -25,5 +25,10 @@
     "prefix": "v3classcond",
     "body": [":class=\"[", " '',", " {", " '': ${1:variable}", " },", "]"],
     "description": "class conditional"
+  },
+  "Vue cn class": {
+    "prefix": "vcn",
+    "body": [":class=\"cn('${1}')\""],
+    "description": "class conditional"
   }
 }

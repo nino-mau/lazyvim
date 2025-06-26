@@ -307,7 +307,9 @@
       {
         "language": [
           "typescript",
-          "javascript"
+          "javascript",
+          "javascriptreact",
+          "typescriptreact"
         ],
         "path": "./javascript/all.json"
       },

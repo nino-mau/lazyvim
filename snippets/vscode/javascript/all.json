@@ -14,5 +14,9 @@
   "arrow function": {
     "prefix": "cf",
     "body": ["const ${1:name} = () => {", " ${2}", "};"]
+  },
+  "async anonymous function": {
+    "prefix": "fano",
+    "body": ["(async () => {", " ${1}", "} )();"]
   }
 }

@@ -15,16 +15,19 @@ map("n", "<Tab>", "<cmd>bnext<CR>", { desc = "Next buffer" })
 -- Shift-Tab to go to previous buffer
 map("n", "<S-Tab>", "<cmd>bprevious<CR>", { desc = "Previous buffer" })
 
+-- Delete word under cursor
+map("n", "<C-BS>", "<C-\\><C-O>daw", { desc = "Delete word" })
+
 -- Remap luansip key to jump between snippets node
-vim.keymap.set({ "i", "s" }, "<C-D>", function()
+map({ "i", "s" }, "<C-D>", function()
   ls.jump(1)
 end, { silent = true })
-vim.keymap.set({ "i", "s" }, "<C-G>", function()
+map({ "i", "s" }, "<C-G>", function()
   ls.jump(-1)
 end, { silent = true })
 
 -- Keybind to activate/deactivate supermaven auto completion
-vim.keymap.set("n", "<leader>ac", function()
+map("n", "<leader>ac", function()
   if supermavenSuggestion.disable_inline_completion then
     supermavenSuggestion.disable_inline_completion = false
     print("Inline AI autocompletion ENABLED")
@@ -34,7 +37,7 @@ vim.keymap.set("n", "<leader>ac", function()
   end
 end, { desc = "Toggle inline completion" })
 
-vim.keymap.set("i", "<C-c>", function()
+map("i", "<C-c>", function()
   if supermavenSuggestion.disable_inline_completion then
     supermavenSuggestion.disable_inline_completion = false
     print("Inline AI autocompletion ENABLED")
@@ -43,3 +46,6 @@ vim.keymap.set("i", "<C-c>", function()
     print("Inline AI autocompletion DISABLED")
   end
 end, { desc = "Toggle inline completion" })
+
+-- Keybind to trigger inc rename
+map("n", "<leader>rn", ":IncRename ")

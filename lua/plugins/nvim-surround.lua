@@ -4,11 +4,7 @@ return {
   event = "VeryLazy",
   opts = {
     keymaps = {
-      visual = "S", -- surround selection in Visual mode
-      visual_line = "gS", -- surround selection in Visual-Line mode
-      add = "ys", -- as usual in Normal mode
-      delete = "ds",
-      change = "cs",
+      visual = "gS", -- surround selection in Visual mode
     },
   },
   config = function()

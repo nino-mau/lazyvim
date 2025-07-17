@@ -8,22 +8,11 @@ return {
       ["<CR>"] = { "accept", "fallback" },
     },
     completion = {
-      documentation = {
-        auto_show = true,
-        auto_show_delay_ms = 200,
-        treesitter_highlighting = true,
-        window = {
-          border = "rounded",
-          scrollbar = true,
-        },
-      },
       ghost_text = {
         enabled = false,
       },
       menu = {
         scrollbar = false,
-        winhighlight = "Normal:CmpPmenu,Search:None,FloatBorder:CmpBorder",
-        border = "single",
         draw = {
           components = {
             kind_icon = {

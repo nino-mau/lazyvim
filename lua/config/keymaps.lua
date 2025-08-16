@@ -6,6 +6,10 @@ local map = vim.keymap.set
 local ls = require("luasnip")
 local supermavenSuggestion = require("supermaven-nvim.completion_preview")
 
+--
+-- Various utilities keybindings
+--
+
 -- In normal mode, <C-c> will select all lines and yank into the system clipboard:
 map("n", "<C-c>", ":%y<CR>", { noremap = true, silent = true, desc = "Copy entire buffer to system clipboard" })
 
@@ -17,6 +21,22 @@ map("n", "<S-Tab>", "<cmd>bprevious<CR>", { desc = "Previous buffer" })
 
 -- Delete word under cursor
 map("n", "<C-BS>", "<C-\\><C-O>daw", { desc = "Delete word" })
+
+-- Copy word under cursor
+map("n", "yw", "yiw", { desc = "Copy word under cursor" })
+
+-- Del word under cursor
+map("n", "<C-x>", "diw", { desc = "Delete word under cursor" })
+
+-- Edit word under cursor
+map("n", "cw", "ciw", { desc = "Edit word under cursor" })
+
+--
+-- Various plugins related keybindings
+--
+
+-- Keybind to trigger inc rename
+map("n", "<leader>rn", ":IncRename ")
 
 -- Remap luansip key to jump between snippets node
 map({ "i", "s" }, "<C-D>", function()
@@ -46,6 +66,3 @@ map("i", "<C-c>", function()
     print("Inline AI autocompletion DISABLED")
   end
 end, { desc = "Toggle inline completion" })
-
--- Keybind to trigger inc rename
-map("n", "<leader>rn", ":IncRename ")

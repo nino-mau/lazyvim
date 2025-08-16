@@ -1,5 +1,6 @@
 return {
   "CopilotC-Nvim/CopilotChat.nvim",
+  -- "nino-mau/CopilotChat.nvim",
   branch = "main",
   cmd = "CopilotChat",
   opts = function()

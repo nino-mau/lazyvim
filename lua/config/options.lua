@@ -9,6 +9,9 @@ vim.g.lazyvim_eslint_auto_format = true
 --
 -- WORD WRAP
 --
+vim.opt.breakindent = true -- Enable break indent
+vim.opt.breakindentopt = "shift:2,min:40,sbr" -- Configure break indent
+vim.opt.showbreak = "↪ " -- Visual indicator for wrapped lines
 -- vim.opt.wrap = false -- Visually wrap long lines
 -- vim.opt.linebreak = true -- Break at word boundaries
 -- vim.opt.breakindent = true -- Keep wrapped lines visually indented

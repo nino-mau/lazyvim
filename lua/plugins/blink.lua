@@ -19,7 +19,7 @@ return {
               ellipsis = false,
               text = function(ctx)
                 local kind_icon, _, _ = require("mini.icons").get("lsp", ctx.kind)
-                return kind_icon
+                return kind_icon .. " "
               end,
             },
           },

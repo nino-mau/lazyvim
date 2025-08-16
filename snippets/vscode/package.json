@@ -302,7 +302,7 @@
           "typescript",
           "typescriptreact"
         ],
-        "path": "./javascript/typescript.json"
+        "path": "./javascript/typescript.jsonc"
       },
       {
         "language": [
@@ -390,7 +390,7 @@
       },
       {
         "language": "angular",
-        "path": "./frameworks/angular/typescript.json"
+        "path": "./frameworks/angular/typescript.jsonc"
       },
       {
         "language": "angular",

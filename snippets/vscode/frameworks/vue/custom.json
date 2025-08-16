@@ -1,16 +1,4 @@
 {
-  "Vue define props": {
-    "prefix": "v3defineprops",
-    "body": [
-      "const props = defineProps({",
-      " ${1:item}: {",
-      "   type: ${2:type}",
-      "   default: ${3:default}",
-      "   }",
-      "});"
-    ],
-    "description": "define props statement"
-  },
   "Vue class array": {
     "prefix": "v3classarr",
     "body": [":class=\"['', ${1:variable}]\""],
@@ -30,5 +18,29 @@
     "prefix": "vcn",
     "body": [":class=\"cn('${1}')\""],
     "description": "class conditional"
+  },
+  "Vue TS define props": {
+    "prefix": "vprops",
+    "body": [
+      "interface Props {",
+      " ${1}: ${2};",
+      "};",
+      "",
+      "const props = defineProps<Props>();"
+    ],
+    "description": "define props statement for typescript"
+  },
+  "Vue TS define props with default": {
+    "prefix": "vpropsd",
+    "body": [
+      "interface Props {",
+      " ${1}: ${2};",
+      "}",
+      "",
+      "const props = withDefaults(defineProps<Props>(), {",
+      " props: content",
+      "});"
+    ],
+    "description": "define props statement for typescript with default"
   }
 }

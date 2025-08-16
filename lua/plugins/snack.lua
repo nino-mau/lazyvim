@@ -2,7 +2,18 @@ return {
   "folke/snacks.nvim",
   opts = {
     picker = {
-      exclude = { "node_modules" },
+      exclude = {
+        "node_modules",
+        -- ".nuxt/dev",
+        -- ".nuxt/dist",
+        ".nuxt/ui",
+        -- ".nuxt/manifest",
+        -- ".nuxt/schema",
+        -- ".nuxt/*.json",
+        ".output",
+        ".pnpm-store",
+      },
+      include = { ".nuxt/types" },
       win = {
         input = {
           keys = {

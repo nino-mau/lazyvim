@@ -490,18 +490,6 @@
     ],
     "description": "vue watcher with options"
   },
-  "Vue Props with Default": {
-    "prefix": "vprops",
-    "body": [
-      "props: {",
-      "\t${1:propName}: {",
-      "\t\ttype: ${2:Number},",
-      "\t\tdefault: ${0}",
-      "\t},",
-      "},"
-    ],
-    "description": "Vue Props with Default"
-  },
   "Vue Import File": {
     "prefix": "vimport",
     "body": ["import ${1:New} from '@/components/${1:New}.vue';"],

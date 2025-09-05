@@ -10,5 +10,10 @@
       "export default ${TM_FILENAME_BASE};"
     ],
     "description": "Creates a React functional component without PropTypes"
+  },
+  "setStateObject": {
+    "prefix": "sto",
+    "body": ["set${1}((prev) => ({", "...prev,", "${2}: ${3}", "}));"],
+    "description": "To set specific proprety of a state object"
   }
 }

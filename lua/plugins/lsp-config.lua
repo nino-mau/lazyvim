@@ -28,7 +28,15 @@ return {
             end
           end,
         },
-        ["stylelint_lsp"] = {
+        vtsls = {
+          experimental = {
+            completion = {
+              enableServerSideFuzzyMatch = true,
+              entriesLimit = 50,
+            },
+          },
+        },
+        stylelint_lsp = {
           filetypes = { "css", "vue", "scss", "less", "sass" },
           settings = {
             stylelintplus = {
@@ -37,7 +45,7 @@ return {
             },
           },
         },
-        ["cssls"] = {
+        cssls = {
           settings = {
             css = {
               lint = {
@@ -46,7 +54,7 @@ return {
             },
           },
         },
-        ["tailwindcss"] = {
+        tailwindcss = {
           filetypes = { "css", "vue", "html", "typescript", "typescriptreact" },
           settings = {
             tailwindCSS = {

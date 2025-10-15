@@ -5,6 +5,7 @@ return {
       jsonc = { "prettier" },
       json = { "prettier" },
       svg = { "prettier" },
+      htmldjango = { "djlint" },
     },
     formatters = {
       prettier = {

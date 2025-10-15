@@ -39,7 +39,7 @@ return {
 
   -- add any tools you want to have installed below
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     version = "^2.0.0",
     opts = {
       ensure_installed = {

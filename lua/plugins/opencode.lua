@@ -1,7 +1,6 @@
 return {
   "NickvanDyke/opencode.nvim",
   dependencies = {
-    -- Recommended for `ask()`, and required for `toggle()` — otherwise optional
     { "folke/snacks.nvim", opts = { input = { enabled = true } } },
   },
   config = function()

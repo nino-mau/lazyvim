@@ -8,6 +8,27 @@ wk.add({
   } },
 
   --
+  -- Opencode
+  --
+
+  { "<leader>at", icon = {
+    color = "orange",
+    icon = " ",
+  } },
+  { "<leader>ae", icon = {
+    color = "orange",
+    icon = " ",
+  } },
+  { "<leader>aa", icon = {
+    color = "orange",
+    icon = " ",
+  } },
+  { "<leader>an", icon = {
+    color = "orange",
+    icon = " ",
+  } },
+
+  --
   -- Multi cursor plugins keymaps
   --
   {

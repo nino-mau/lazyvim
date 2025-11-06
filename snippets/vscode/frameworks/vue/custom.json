@@ -42,5 +42,26 @@
       "});"
     ],
     "description": "define props statement for typescript with default"
+  },
+  "Vue svg component template": {
+    "prefix": "vsvg",
+    "body": [
+      "<template>",
+      "\t<div>",
+      "",
+      "\t</div>",
+      "</template>",
+      "",
+      "<script>",
+      "\texport default {",
+      "\t\t${0}",
+      "\t}",
+      "</script>",
+      "",
+      "<style lang=\"sass\" scoped>",
+      "",
+      "</style>"
+    ],
+    "description": "define props statement for typescript with default"
   }
 }

@@ -7,6 +7,8 @@ return {
       htmldjango = { "djlint" },
       json = { "prettier" },
       svg = { "prettier" },
+      java = { "google_java_format" },
+      sql = { "sql_formatter" },
     },
     formatters = {
       prettier = {

@@ -10,11 +10,31 @@ return {
     config = function()
       local ls = require("luasnip")
 
+      local s, sn = ls.snippet, ls.snippet_node
+      local i, d = ls.insert_node, ls.dynamic_node
+
       ls.filetype_extend("vue", { "typescript" })
 
       ls.config.setup({
         history = true,
         updateevents = "TextChanged,TextChangedI",
+      })
+
+      local function uuid()
+        local id, _ = vim.fn.system("uuidgen"):gsub("\n", "")
+        return id
+      end
+
+      ls.add_snippets("global", {
+        s({
+          trig = "uuid",
+          name = "UUID",
+          dscr = "Generate a unique UUID",
+        }, {
+          d(1, function()
+            return sn(nil, i(1, uuid()))
+          end),
+        }),
       })
 
       -- vim.keymap.set({ "i", "s" }, "<C-P>", function()
